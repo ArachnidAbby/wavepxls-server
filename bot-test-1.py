@@ -65,4 +65,4 @@ try:
     print(ident) 
     client.run(str(ident[0]))
 except:
-    client.run(input("id/token?"))
+    client.run(os.getenv('TOKEN'))
