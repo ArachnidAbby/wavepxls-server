@@ -25,6 +25,16 @@ async def on_message(message):
         await client.send_message(message.channel, answer)
         print("someone flipped a cloin"+time.ctime())
         print('---------------------------')
+    elif message.content.startswith('|help'):
+        await client.send_message(message.channel, '''you can do: 
+        |coin
+        |addquote <quote>
+        |quote
+        |roll
+        |help
+        ''')
+        print("someone asked for help "+time.ctime())
+        print('---------------------------')
     #addquote
     elif message.content.startswith('|addquote'):
         if not os.path.isfile("quotes.pk1"):
