@@ -4,6 +4,8 @@ import random
 import os
 import pickle
 import time
+global prefix 
+prefix = "|"
 client = discord.Client()
 @client.event
 async def on_ready():
@@ -17,7 +19,7 @@ async def on_message(message):
     #conpelment
     if message.content.startswith('I love your vids'):
         await client.send_message(message.channel, 'me too!')
-        print("someone complimented you"+time.ctime())
+        print("someone complimented you "+time.ctime())
         print('---------------------------')
     #coin
     elif message.content.startswith('|coin'):
